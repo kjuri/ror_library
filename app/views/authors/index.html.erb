@@ -1,0 +1,30 @@
+<h1>Autorzy</h1>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Autor</th>
+      <% if user_signed_in? %><th>Opcje</th><% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= link_to author.full_name, author %></td>
+        <% if user_signed_in? %><td>
+          <%= link_to 'Edytuj', edit_author_path(author) %>
+          <%= link_to 'Usuń', author, method: :delete, data: { confirm: 'Na pewno?' } %>
+        </td><% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @authors %>
+
+<br>
+
+<%= link_to 'New Author', new_author_path %>

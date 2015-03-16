@@ -1,0 +1,33 @@
+<div id="header">Biblioteka</div>
+<div id="menu">
+<div id="links">
+  <p>
+    <%= link_to(authors_path) do %>
+      <%= image_tag('/images/Pen.png') %>
+      </br>
+      Autorzy
+    <% end %>
+  </p>  
+  <p>
+    <%= link_to(books_path) do %>
+      <%= image_tag('/images/Book Open.png') %>
+      </br>
+      Książki
+    <% end %>
+  </p>
+  <p>
+    <%= link_to(categories_path) do %>
+      <%= image_tag('/images/Tag.png') %>
+      </br>
+      Kategorie
+    <% end %>
+  </p>
+  <p>
+    <%= link_to(entries_path) do %>
+      <%= image_tag('/images/Balloon.png') %>
+      </br>
+      Księga gości
+    <% end %>
+  </p>
+</div>
+</div>

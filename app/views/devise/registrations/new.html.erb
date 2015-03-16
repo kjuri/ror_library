@@ -1,0 +1,18 @@
+<h1>Rejestracja</h1>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+  <%= f.email_field :email, :autofocus => true, :id => 'login', :placeholder => 'Adres email' %></div>
+
+  <div>
+  <%= f.password_field :password, :id => 'login', :placeholder => 'Hasło (8-18 znaków)' %></div>
+
+  <div>
+  <%= f.password_field :password_confirmation, :id => 'login', :placeholder => 'Powtórz hasło' %></div>
+
+  <div><%= f.submit "Zarejestruj się" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

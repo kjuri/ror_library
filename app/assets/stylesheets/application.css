@@ -1,0 +1,152 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+a	{
+  color: rgb(240, 240, 240);
+}
+
+.alert 	{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 14px;
+  background-color: rgb(130, 0, 0);
+  border-radius: 5px;
+  width: 800px;
+  padding: 10px;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  margin-left: -400px;
+}
+
+#login	{
+  padding: 5px;
+  width: 300px;
+  font-family: Arial;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #000000;
+}
+
+div#content	{
+  background-color: rgba(120, 120, 120, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  text-align: center;
+  color: black;
+}
+
+@font-face      {
+  font-family: 'header';
+  font-weight: 700;
+  src: local('Anaheim'), local('Anaheim-Regular'), url(http://themes.googleusercontent.com/static/fonts/anaheim/v2/urC4Oeg-NluxJY7D2QJC_w.woff) format('woff');
+}
+
+h1	{
+  font-family: 'header';
+  font-size: 28px;
+}
+
+h2	{
+  font-family: 'header';
+  font-size: 18px;
+}
+
+table	{
+  margin: auto;
+  padding: 5px;
+}
+
+td	{
+  padding: 5px;
+}
+
+input.search_authors	{
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+  border: solid rgb(20, 20, 20) 1px;
+  padding: 5px;
+  width: 300px;
+  height: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  display: inline;
+  position: relative;
+  left: 25%;
+  top: -25px;
+  margin-left: -150px;
+}
+
+input.search_books	{
+  display: inline;
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+  border: solid rgb(20, 20, 20) 1px;
+  padding: 5px;
+  width: 300px;
+  height: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 75%;
+  top: -55px;
+  margin-left: -150px;
+}
+
+#login_box	{
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  left: 100%;
+  top: 10px;
+  margin-left: -60px;
+}
+
+#home_box	{
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  top: 10px;
+  margin-left: -20px;
+}
+
+#my_books_box	{
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: 15px;
+  left: -5px;
+}
+
+div#menu_bottom	{
+  background-color: rgba(120, 120, 120, 0.3);
+  height: 70px;
+  width: 100%;
+  display: inline;
+  position: fixed;
+  top: 100%;
+  margin-top: -70px;
+}
+
+input.reservation	{
+  background-color: rgba(0, 50, 0, 0.3);
+  border: 0px;
+  padding: 5px;
+}

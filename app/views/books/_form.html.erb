@@ -1,0 +1,48 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="border-radius: 5px; width: 200px;float: left; margin-left: 50px; font-size: 10px; text-align: left; position: relative; top: -20px; background-color: rgba(0, 0, 30, 0.3); padding: 5px; color: #888888;">
+  <%= link_to new_category_path do %>
+    <strong style="font-size: 12px; color: #888888;">Kategorie (kliknij, aby dodać nową)</strong>
+  <% end %>
+  <% Category.all.each do |category| %>
+    <div class="checkboxform">
+      <%= check_box_tag "book[category_ids][]", category.id %>
+      <label><%= category.name %></label>
+    </div>
+  <% end %>
+  </div>
+  <div id="book_form">
+  <div class="field">
+    <%= f.text_field :title, :placeholder => 'Tytuł' %>
+  </div>
+  <div class="field">
+    <%= f.select :author_id, @authors, :include_blank => 'Autor' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :place, :placeholder => 'Miejsce wydania' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :publisher, :placeholder => 'Wydawnictwo' %>
+  </div>
+  <div class="field">
+    <%= f.text_field :year, :placeholder => 'Rok wydania' %>
+  </div>
+  <div>
+    <%= f.text_field :isbn, :placeholder => 'Numer ISBN' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Utwórz książkę" %>
+  </div>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+pl:
+  activerecord:
+    errors:
+      models:
+        author:
+          attributes:
+            first_name:
+              blank: "Podaj imię"
+            last_name:
+              blank: "Podaj nazwisko"
+        book:
+          attributes:
+            title:
+              blank: "Podaj tytuł"
+            author:
+              blank: "Podaj autora"
+            isbn:
+              blank: "Numer ISBN wymagany do weryfikowania niepowtarzalności rekordów w bazie książek."
+  helpers:
+    label:
+      user:
+        remember_me: "Zapamiętaj"
+  will_paginate:
+    previous_label: "< Wstecz "
+    next_label: " Dalej >"
+  date:
+    day_names: [Niedziela, Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota]
+    abbr_day_names: [Nie, Pon, Wto, Śro, Czw, Pią, Sob]
+    month_names: [~, Styczeń, Luty, Marzec, Kwiecień, Maj, Czerwiec, Lipiec, Sierpień, Wrzesień, Październik, Listopad, Grudzień]
+    order:
+      - year
+      - month
+      - day 

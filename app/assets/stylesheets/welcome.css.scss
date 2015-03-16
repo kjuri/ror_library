@@ -1,0 +1,126 @@
+
+
+body	{
+  background-image: image-url("book.png");
+  background-color: #111111;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 0;
+  margin: 0;
+}
+
+#header:hover	{
+  cursor: pointer;
+  
+  text-shadow: 0px 0px 5px #CCCCCC;
+  -moz-transition: color 400ms;
+  -moz-transition: text-shadow 400ms;
+  -webkit-transition: color 400ms;
+  -o-transition: color 400ms;
+  transition: color 400ms;
+  -webkit-transition: text-shadow 400ms;
+  -o-transition: text-shadow 400ms;
+  transition: text-shadow 400ms;
+}
+
+#header	{
+  font-family: 'title';
+  font-size: 72px;
+  width: 400px;
+  height: 120px;
+  color: #AAAAAA;
+  letter-spacing: -2px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgb(51, 61, 90);
+  -moz-transition: color 400ms;
+  -moz-transition: text-shadow 400ms;
+  -webkit-transition: color 400ms;
+  -webkit-transition: text-shadow 400ms;
+  -o-transition: color 400ms;
+  -o-transition: text-shadow 400ms;
+  transition: color 400ms;
+  transition: text-shadow 400ms;
+  position: fixed;
+  left: 50%;
+  top: 150px;
+  margin-left: -200px;
+  z-index: -1;
+}
+
+@font-face	{
+  font-family: 'title';
+  src: url('FLOW.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div#menu	{
+  background-color: rgba(100, 100, 100, 0.3);
+  z-index: 15;
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  display: block;
+  height: 300px;
+  width: 100%;
+}
+
+div#links	{
+  width: 900px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: 15px;
+}
+
+div#header	{
+  background: none;
+}
+
+div#links > p	{
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  font-family: 'menu';
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bolder;
+  padding-top: 30px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+@font-face	{
+  font-family: 'menu';
+  font-weight: 700;
+  src: local('Anaheim'), local('Anaheim-Regular'), url(http://themes.googleusercontent.com/static/fonts/anaheim/v2/urC4Oeg-NluxJY7D2QJC_w.woff) format('woff');
+}
+
+a	{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+a:hover	{
+  background: none;
+}
+
+div#links > p:hover	{
+  background-color: rgba(31, 41, 70, 0.6);
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+
+}
+
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/

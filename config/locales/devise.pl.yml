@@ -1,0 +1,8 @@
+pl:
+  devise:
+    sessions:
+      signed_in: "Zostałeś(aś) zalogowany(a)."
+      signed_out: "Zostałeś(aś) wylogowany(a)."
+    registrations:
+      user:
+        updated: "Hasło zostało zmienione."

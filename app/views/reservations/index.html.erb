@@ -1,0 +1,33 @@
+<h1>Twoje rezerwacje:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tytuł:</th>
+      <th>Autor:</th>
+      <th>Data rezerwacji:</th>
+      <th>Data zwrotu:</th>
+      <th>Opcje:
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <% if reservation.user_id == current_user.id %>
+        <tr>
+          <td><%= reservation.book.title %></td>
+          <td><%= reservation.book.author.full_name %></td>
+          <td><%= reservation.reserved_on.to_formatted_s(:long_ordinal) %></td>
+          <td><%= (reservation.reserved_on + 1.month).to_formatted_s(:long_ordinal) %>
+          <td>
+            <%= link_to 'Anuluj rezerwację', reservation, method: :delete, data: { confirm: 'Na pewno?' } %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nowa rezerwacja', books_path %>

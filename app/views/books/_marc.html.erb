@@ -1,0 +1,5 @@
+<%= form_tag('/books/marc', method: :post) do %>
+  <strong>Opis bibliograficzny w formacie MARC:</strong><br><br>
+  <%= text_area_tag :q, nil, rows: 20, cols: 70, :placeholder => 'Wymagane pola opisu MARC: 020 (ISBN), 100 (autor), 245 (tytuł) oraz 260 (informacje wydawnicze: $aMiejsceWydania, $bWydawnictwo i $ccRokWydania' %><br>
+  <%= submit_tag 'Importuj' %>
+<% end %>

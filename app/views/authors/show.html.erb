@@ -1,0 +1,19 @@
+<h1>
+  <%= @author.full_name %>
+</h1>
+<p id="notice"><%= notice %></p>
+<p class="author_description">
+  <strong>Opis (ang):</strong><br/>
+  <%= @bio %>
+</p>
+<p>
+  <strong>Książki:</strong>
+  <ul class="book_listing">
+  <% @author.books.each do |book| %>
+    <li><%= link_to book.title, book %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edycja', edit_author_path(@author) %> |
+<%= link_to 'Wstecz', authors_path %>

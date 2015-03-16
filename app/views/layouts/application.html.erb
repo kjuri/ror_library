@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "animate", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="content">
+    <%= yield %>
+  </div>
+  <div id="menu_bottom">
+    <% if user_signed_in? %>
+      <%= link_to image_tag("Logout.png", :border => 0, :width => 30, :height => 30), destroy_user_session_path, method: :delete, id: "login_box" %>
+    <% else %>
+      <%= link_to image_tag("Login.png", :border => 0, :width => 30, :height => 30), new_user_session_path, id: "login_box" %>
+    <% end %>
+    <%= link_to image_tag("Home.png", :border => 0, :width => 30, :height => 30), root_path, id: "home_box" %>
+    <% if user_signed_in? %>
+      <%= link_to image_tag("MyBook.png", :border => 0, :width => 40, :height => 40), reservations_path, id: "my_books_box" %>
+    <% end %>
+    <%= search_form_for @a, url: search_authors_path,
+                            html: { method: :post } do |f| %>
+      <%= f.text_field :first_name_or_last_name_cont, :placeholder => 'Szukaj autorów...', :class => 'search_authors' %>
+    <% end %>
+    <%= search_form_for @b, url: search_books_path,
+                            html: { method: :post } do |f| %>
+      <%= f.text_field :title_cont, :placeholder => 'Szukaj książek...', :class => 'search_books' %>
+    <% end %>
+  </div>
+</body>
+</html>

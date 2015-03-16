@@ -1,0 +1,16 @@
+// Place all the styles related to the authors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+p.author_description	{
+  width: 1000px;
+  position: relative;
+  left: 50%;
+  margin-left: -500px;
+}
+
+ul.book_listing	{
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}

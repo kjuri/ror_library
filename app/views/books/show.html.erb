@@ -1,0 +1,47 @@
+<h1>
+  <%= @book.title %>
+</h1>
+<p id="notice"><%= notice%></p>
+<p>
+  <strong>Autor:</strong>
+  <%= link_to @book.author.full_name, @book.author %>
+</p>
+<p>
+  <strong>Miejsce wydania: </strong>
+  <%= @book.place %>
+</p>
+<p>
+  <strong>Wydawnictwo: </strong>
+  <%= @book.publisher %>
+</p>
+<p>
+  <strong>Rok wydania: </strong>
+  <%= @book.year %>
+</p>
+<p>
+  <strong>ISBN: </strong>
+  <%= @book.isbn %>
+</p>
+<p style="font-size: 10px;">
+  <strong style="font-size: 12px;">Kategorie:</strong><br>
+  <% @book.categories.each do |category| %>
+  <%= link_to category.name, category %><br>
+  <% end %>
+</p>
+<% if user_signed_in? %>
+  <p>
+    <%= form_for(Reservation.new) do |f| %>
+      <%= f.hidden_field :reserved_on, value: Time.now.to_datetime %>
+      <%= f.hidden_field :book_id, value: @book.id %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= submit_tag("Zarezerwuj") %>
+    <% end %>
+
+  </p>
+<% end %>
+<p>
+  <strong>Opis bibliograficzny:</strong><br>
+  <%= @iso690 %>
+</p>
+<%= link_to 'Edytuj', edit_book_path(@book) %> |
+<%= link_to 'Wstecz', books_path %>
